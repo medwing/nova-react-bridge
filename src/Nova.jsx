@@ -25,6 +25,7 @@ class Nova extends Component {
       const id = this.placeholder.current.getAttribute('data-hypernova-id');
       const { name } = this.props;
       const customEvent = new CustomEvent('NovaMount', { detail: { id, name } });
+      document.dispatchEvent(customEvent);
     }
   }
 
